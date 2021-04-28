@@ -10,8 +10,8 @@ services:
             - '443:8443'
             - '50000:50000'
         volumes:
-            - jenkins_home:/jenkins_home
-            - jenkins:/var/jenkins_config
+            - ./jenkins_home:/var/jenkins_home
+            - ./jenkins:/var/jenkins_config
 
 volumes:
     jenkins_home:
