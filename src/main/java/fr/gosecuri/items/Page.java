@@ -6,15 +6,17 @@ public class Page {
     private String type;
     private ArrayList<String> list;
     private String fiche;
+    private String nom;
 
     public Page(String type, ArrayList<String> list) {
         this.type = type;
         this.list = list;
     }
 
-    public Page(String type, String fiche, ArrayList<String> list) {
+    public Page(String type, String fiche, String nom, ArrayList<String> list) {
         this.type = type;
         this.fiche = fiche;
+        this.nom = nom;
         this.list = list;
     }
 
@@ -28,5 +30,9 @@ public class Page {
 
     public String getFiche() {
         return fiche;
+    }
+
+    public String getNom() {
+        return nom;
     }
 }

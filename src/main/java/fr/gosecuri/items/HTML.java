@@ -27,7 +27,7 @@ public class HTML {
         }
     }
 
-    public static void GenerateAgent(String fiche, ArrayList<String> items) {
+    public static void GenerateAgent(String fiche, String nom, ArrayList<String> items) {
         String listItems = "";
 
         if (items != null) {
@@ -41,7 +41,7 @@ public class HTML {
 
         try {
             String bodyString = FileUtils.readFileToString(bodyHtmlTemplateFile);
-            bodyString = bodyString.replace("$identification", fiche);
+            bodyString = bodyString.replace("$identification", nom);
             bodyString = bodyString.replace("$link", "https://raw.githubusercontent.com/hugotms/b3_mspr_sauvegarde/main/" + fiche + ".jpg");
             bodyString = bodyString.replace("$items", listItems);
 
