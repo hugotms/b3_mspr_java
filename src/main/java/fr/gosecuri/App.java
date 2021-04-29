@@ -11,7 +11,7 @@ public class App {
         pages.add(new Page("accueil", null));
 
         // Pour l'instant fait en dur, il faudra implementer une fonction qui prend toutes les fiches agent
-        pages.add(new Page("agent", "pallois.txt"));
+        pages.add(new Page("agent", "jpepe"));
 
         for (Page page: pages) {
             //Java considère un thread comme un objet
