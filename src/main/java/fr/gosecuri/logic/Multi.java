@@ -18,7 +18,7 @@ public class Multi extends Thread {
                 HTML.GenerateAccueil(page.getList());
                 break;
             case "agent":
-                HTML.GenerateAgent(page.getFiche(), page.getList());
+                HTML.GenerateAgent(page.getFiche(), page.getNom(), page.getList());
                 break;
             default:
                 System.out.println("unknown file type");
