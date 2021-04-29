@@ -1,6 +1,9 @@
 # Directory IntelliJ
 .idea/
 
+#Dossier compilation
+target/
+
 # Compiled class file
 *.class
 
