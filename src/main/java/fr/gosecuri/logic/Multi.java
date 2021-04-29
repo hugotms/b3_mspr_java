@@ -3,8 +3,6 @@ package fr.gosecuri.logic;
 import fr.gosecuri.items.HTML;
 import fr.gosecuri.items.Page;
 
-import java.util.ArrayList;
-
 public class Multi extends Thread {
     private Page page;
 
@@ -17,15 +15,10 @@ public class Multi extends Thread {
     public void run() {
         switch (page.getType()) {
             case "accueil":
-                ArrayList<String> arrayList = new ArrayList<>();
-                arrayList.add("hugo");
-                HTML.GenerateAccueil(arrayList);
+                HTML.GenerateAccueil(page.getList());
                 break;
             case "agent":
-                ArrayList<String> items = new ArrayList<>();
-                items.add("couteau");
-                items.add("taser");
-                HTML.GenerateAgent(page.getArgs().toString(), items);
+                HTML.GenerateAgent(page.getFiche(), page.getList());
                 break;
             default:
                 System.out.println("unknown file type");

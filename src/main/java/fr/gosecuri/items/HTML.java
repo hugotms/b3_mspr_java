@@ -10,9 +10,11 @@ public class HTML {
     public static void GenerateAccueil(ArrayList<String> users) {
         String body = "";
 
-        for (String user: users) {
-            body += "<a href='./" + user + ".html'>" + user + "</a>" +
-                    "<br>";
+        if (users != null) {
+            for (String user : users) {
+                body += "<a href='./" + user + ".html'>" + user + "</a>" +
+                        "<br>";
+            }
         }
 
         try {
@@ -28,9 +30,11 @@ public class HTML {
     public static void GenerateAgent(String fiche, ArrayList<String> items) {
         String listItems = "";
 
-        for (String item: items) {
-            listItems += "<p>" + item + "</p>" +
-                    "<br>";
+        if (items != null) {
+            for (String item : items) {
+                listItems += "<p>" + item + "</p>" +
+                        "<br>";
+            }
         }
 
         File bodyHtmlTemplateFile = new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/agentBody.html");
@@ -38,11 +42,11 @@ public class HTML {
         try {
             String bodyString = FileUtils.readFileToString(bodyHtmlTemplateFile);
             bodyString = bodyString.replace("$identification", fiche);
-            bodyString = bodyString.replace("$link", "https://raw.githubusercontent.com/hugotms/b3_mspr_sauvegarde/main/jpepe.jpg");
+            bodyString = bodyString.replace("$link", "https://raw.githubusercontent.com/hugotms/b3_mspr_sauvegarde/main/" + fiche + ".jpg");
             bodyString = bodyString.replace("$items", listItems);
 
             FileUtils.writeStringToFile(
-                    new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/hugo.html"),
+                    new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/" + fiche + ".html"),
                     GetBase(fiche).replace("$body", bodyString)
             );
         } catch (Exception e) {
