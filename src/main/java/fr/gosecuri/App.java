@@ -22,9 +22,20 @@ public class App {
                 try {
                     Scanner agentInfos = new Scanner(new URL("https://raw.githubusercontent.com/hugotms/b3_mspr_sauvegarde/main/" + fiche + ".txt").openStream());
                     String nom = agentInfos.next();
+                    String prenom = agentInfos.next();
+                    String job = agentInfos.next();
+                    String id = agentInfos.next();
+                    ArrayList<String> items = new ArrayList<>();
+
+                    while (agentInfos.hasNext()) {
+                        String item = agentInfos.next();
+                        if (item != "") {
+                            items.add(item);
+                        }
+                    }
 
                     pages.get(0).getList().add(fiche);
-                    pages.add(new Page("agent", fiche, nom, null));
+                    pages.add(new Page("agent", fiche, nom, prenom, job, id, items));
                 } catch (Exception e) {
                     System.out.println("Impossible de lire le fichier " + fiche + ".txt");
                 }
