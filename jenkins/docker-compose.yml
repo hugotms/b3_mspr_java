@@ -12,6 +12,13 @@ services:
         volumes:
             - ./jenkins_home:/var/jenkins_home
             - ./jenkins:/var/jenkins_config
+    apache:      
+        image: 'bitnami/apache:latest'
+        ports:
+            - '9090:8080'
+              #- '443:8443'
+        volumes:
+            - ./jenkins_home:/var/jenkins_home
 
 volumes:
     jenkins_home:
