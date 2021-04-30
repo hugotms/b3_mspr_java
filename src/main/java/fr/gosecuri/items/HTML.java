@@ -44,6 +44,9 @@ public class HTML {
         try {
             String bodyString = GetTextFromUrl("https://raw.githubusercontent.com/hugotms/b3_mspr_java/main/src/main/resources/agentBody.html");
             bodyString = bodyString.replace("$identification", nom);
+            bodyString = bodyString.replace("$nom", nom);
+            bodyString = bodyString.replace("$prenom", prenom);
+            bodyString = bodyString.replace("$job", job);
             bodyString = bodyString.replace("$link", "https://raw.githubusercontent.com/hugotms/b3_mspr_sauvegarde/main/" + fiche + ".jpg");
             bodyString = bodyString.replace("$items", listItems);
 
