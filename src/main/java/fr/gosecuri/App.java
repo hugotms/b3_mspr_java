@@ -16,6 +16,7 @@ public class App {
         // Pour chaque utilisateur de la page d'acceuil
         try {
             Scanner s = new Scanner(new URL("https://raw.githubusercontent.com/hugotms/b3_mspr_sauvegarde/main/staff.txt").openStream());
+
             while (s.hasNext()) {
                 String fiche = s.next();
                 try {
