@@ -10,9 +10,6 @@ public class HTML {
     public static void GenerateAccueil(ArrayList<String> users) {
         String body = "";
 
-        // On récupère notre template et on le transforme en string
-        File bodyTemplateFile = new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/agentBody.html");
-        //String bodyString = FileUtils.readFileToString(bodyTemplateFile);
 
         for (String user: users) {
             body += "<a href='" + user + ".html' />" +
@@ -21,7 +18,7 @@ public class HTML {
 
         try {
             FileUtils.writeStringToFile(
-                    new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/new.html"),
+                    new File("D:/EPSI/B3annee2020-2021/Integration Continue/mspr java/b3_mspr_java/src/main/resources/new.html"),
                     GetBase("Accueil").replace("$body", body)
             );
         } catch (Exception e) {
@@ -34,7 +31,7 @@ public class HTML {
     }
 
     private static String GetBase(String title) {
-        File htmlTemplateFile = new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/template.html");
+        File htmlTemplateFile = new File("D:/EPSI/B3annee2020-2021/Integration Continue/mspr java/b3_mspr_java/src/main/resources/template.html");
         try {
             String htmlString = FileUtils.readFileToString(htmlTemplateFile);
             return htmlString.replace("$title", title);
