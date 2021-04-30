@@ -40,6 +40,14 @@ header nav ul li a {
     margin-right: 20px;
 }
 
-div {
+#body {
+    padding-top: 1px;
     background-color: red;
+}
+
+#hero-image {
+    height: auto;
+    max-width: 100%;
+    padding-top: 1px;
+    background: #e8eced url('../image/hero.jpg') no-repeat center;
 }
