@@ -23,7 +23,7 @@ public class HTML {
 
         try {
             FileUtils.writeStringToFile(
-                    new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/index.html"),
+                    new File("./www/index.html"),
                     GetBase("Accueil").replace("$body", body)
             );
         } catch (Exception e) {
@@ -48,7 +48,7 @@ public class HTML {
             bodyString = bodyString.replace("$items", listItems);
 
             FileUtils.writeStringToFile(
-                    new File("C:/Users/hugo.tomasi/Desktop/b3_mspr_java/src/main/resources/" + fiche + ".html"),
+                    new File("./www/" + fiche + ".html"),
                     GetBase(fiche).replace("$body", bodyString)
             );
         } catch (Exception e) {
