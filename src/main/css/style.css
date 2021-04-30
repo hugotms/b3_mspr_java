@@ -1,7 +1,10 @@
 body{
-    background-color: #fff;
+    background-color: #E3E1D8;
     color: #777;
     font: normal 15px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    border-style: solid;
+    border-color: #659224;
+
 }
 p {
     line-height: 20px;
@@ -11,8 +14,10 @@ p {
 header {
     height: 120px;
     border-style: solid;
+    border-radius: 10px;
     border-color: #000000;
-    background-color: #E3E1D8;
+    background-color: #fff;
+    margin: 5px;
 
 }
 header h1 {
@@ -41,7 +46,8 @@ header nav ul li a {
 }
 
 #body {
-    padding-top: 1px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     background-color: red;
 }
 
