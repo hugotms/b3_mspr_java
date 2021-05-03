@@ -1,8 +1,14 @@
 # Directory IntelliJ
 .idea/
 
-#Dossier compilation
+# Dossier compilation
 target/
+
+# Dossier configuration build jar
+src/main/resources/META-INF/
+
+# Dossier jar
+out/
 
 # Compiled class file
 *.class
