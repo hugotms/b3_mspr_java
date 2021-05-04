@@ -1,95 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 30%;
-  height: 300px; /* only for demonstration, should be removed */
-  background: #379EC1;
-  padding: 20px;
-}
-
-/* Style the list inside the menu */
-nav div {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 15px;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #ccc;
-  height: 300px; /* only for demonstration, should be removed */
-  text-align : center;
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-</head>
-<body>
-
-<section>
-    <nav>
-        <ul>
-            <div>
-                <button type="button">$identification</button>
-            </div>
-
-            <div>
-                $items
-            </div>
-
-            <div>
-                $nom
-            </div>
-
-            <div>
-                $prenom
-            </div>
-
-            <div>
-                $job
-            </div>
-
-        </ul>
-    </nav>
-
-    <article>
+<div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ccc">
+    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+        <div>
+            <button style="color: #659224; font-size: 20px" type="button">$identification</button>
+        </div>
         <div>
             <img alt="photo d'identité" src=" $link ">
         </div>
-    </article>
-</section>
+    </div>
 
+    <div style="margin-top: 5px;">
+        $item
+    </div>
 
+    <nav style="text-align: center; background-color: #f1f1f1;">
+        <li style="color: #379EC1; font-size: 20px">$nom</li>
+        <li style="color: #379EC1; font-size: 20px">$prenom</li>
+        <li style="color: #379EC1; font-size: 20px">$job</li>
+    </nav>
+</div>
 
-</body>
-</html>
