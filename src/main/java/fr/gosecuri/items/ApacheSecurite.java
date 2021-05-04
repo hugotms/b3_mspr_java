@@ -33,7 +33,7 @@ public class ApacheSecurite {
                     new File("./www/.htaccess"),
                     "AuthType Basic" + System.lineSeparator() +
                             "AuthName \"Restricted Content\"" + System.lineSeparator() +
-                            "AuthUserFile ./.htpasswd" + System.lineSeparator() +
+                            "AuthUserFile /var/www/html/.htpasswd" + System.lineSeparator() +
                             "Require valid-user"
             );
         } catch (Exception e) {
