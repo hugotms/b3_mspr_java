@@ -1,5 +1,6 @@
 package fr.gosecuri.logic;
 
+import fr.gosecuri.items.ApacheSecurite;
 import fr.gosecuri.items.HTML;
 import fr.gosecuri.items.Page;
 
@@ -18,7 +19,10 @@ public class Multi extends Thread {
                 HTML.GenerateAccueil(page.getList());
                 break;
             case "agent":
-                HTML.GenerateAgent(page.getFiche(), page.getNom(), page.getPrenom(), page.getJob(), page.getId(), page.getList());
+                HTML.GenerateAgent(page.getFiche(), page.getNom(), page.getPrenom(), page.getJob(), page.getList());
+                break;
+            case "htpasswd":
+                ApacheSecurite.GenerateHTPaswd(page.getListUser());
                 break;
             default:
                 System.out.println("unknown file type");

@@ -31,7 +31,7 @@ public class HTML {
         }
     }
 
-    public static void GenerateAgent(String fiche, String nom, String prenom, String job, String id, ArrayList<String> items) {
+    public static void GenerateAgent(String fiche, String nom, String prenom, String job, ArrayList<String> items) {
         String listItems = "";
 
         if (items != null) {
