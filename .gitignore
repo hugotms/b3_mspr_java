@@ -10,6 +10,9 @@ src/main/resources/META-INF/
 # Dossier jar
 out/
 
+# Dossier www
+www/
+
 # Compiled class file
 *.class
 
