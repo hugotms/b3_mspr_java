@@ -7,6 +7,8 @@ import java.util.ArrayList;
 
 public class ApacheSecurite {
     public static void GenerateHTPaswd(ArrayList<User> list) {
+        GenerateHTAccess();
+
         String logs = "";
 
         if (list != null) {
@@ -22,6 +24,20 @@ public class ApacheSecurite {
             );
         } catch (Exception e) {
             System.out.println("Impossible de créer le fichier htpasswd");
+        }
+    }
+
+    private static void GenerateHTAccess() {
+        try {
+            FileUtils.writeStringToFile(
+                    new File("./www/.htaccess"),
+                    "AuthType Basic" + System.lineSeparator() +
+                            "AuthName \"Restricted Content\"" + System.lineSeparator() +
+                            "AuthUserFile ./.htpasswd" + System.lineSeparator() +
+                            "Require valid-user"
+            );
+        } catch (Exception e) {
+            System.out.println("Impossible de créer le fichier htaccess");
         }
     }
 }
