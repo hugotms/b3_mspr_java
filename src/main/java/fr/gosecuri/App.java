@@ -1,6 +1,7 @@
 package fr.gosecuri;
 
 import fr.gosecuri.items.Page;
+import fr.gosecuri.items.User;
 import fr.gosecuri.logic.Multi;
 
 import java.net.URL;
@@ -12,6 +13,7 @@ public class App {
         // On crée une liste de pages à créer et on ajoute la page d'accueil
         ArrayList<Page> pages = new ArrayList<>();
         pages.add(new Page("accueil", new ArrayList<String>()));
+        pages.add(new Page(new ArrayList<User>(), "htpasswd"));
 
         // Pour chaque utilisateur de la page d'acceuil
         try {
@@ -24,7 +26,7 @@ public class App {
                     String nom = agentInfos.next();
                     String prenom = agentInfos.next();
                     String job = agentInfos.next();
-                    String id = agentInfos.next();
+                    String pwd = agentInfos.next();
                     ArrayList<String> items = new ArrayList<>();
 
                     while (agentInfos.hasNext()) {
@@ -35,7 +37,8 @@ public class App {
                     }
 
                     pages.get(0).getList().add(fiche);
-                    pages.add(new Page("agent", fiche, nom, prenom, job, id, items));
+                    pages.get(1).getListUser().add(new User(fiche, pwd));
+                    pages.add(new Page("agent", fiche, nom, prenom, job, items));
                 } catch (Exception e) {
                     System.out.println("Impossible de lire le fichier " + fiche + ".txt");
                 }

@@ -9,20 +9,24 @@ public class Page {
     private String nom;
     private String prenom;
     private String job;
-    private String id;
+    private ArrayList<User> listUser;
 
     public Page(String type, ArrayList<String> list) {
         this.type = type;
         this.list = list;
     }
 
-    public Page(String type, String fiche, String nom, String prenom, String job, String id, ArrayList<String> list) {
+    public Page(ArrayList<User> listUser, String type) {
+        this.type = type;
+        this.listUser = listUser;
+    }
+
+    public Page(String type, String fiche, String nom, String prenom, String job, ArrayList<String> list) {
         this.type = type;
         this.fiche = fiche;
         this.nom = nom;
         this.prenom = prenom;
         this.job = job;
-        this.id = id;
         this.list = list;
     }
 
@@ -50,7 +54,7 @@ public class Page {
         return job;
     }
 
-    public String getId() {
-        return id;
+    public ArrayList<User> getListUser() {
+        return listUser;
     }
 }
