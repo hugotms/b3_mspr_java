@@ -1,21 +1,24 @@
-<div style="display: flex; flex-direction: column; justify-content: space-between; background-color: #ccc">
-    <div style="display: flex; flex-direction: row; justify-content: space-between;">
-        <div>
-            <button style="color: #659224; font-size: 20px" type="button">$identification</button>
+<div class="container" style="margin-top:30px">
+    <div class="row">
+        <div class="col-sm-6">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <button type="button" class="btn-primary btn-lg">$identification</button>
+                </li>
+            </ul>
+            <hr class="d-sm-none">
         </div>
-        <div>
-            <img alt="photo d'identité" src=" $link ">
+        <div class="col-sm-6">
+            <img alt="photo d'identité" src=" $link " width="304" height="236">
+            <br>
+
         </div>
     </div>
 
-    <div style="margin-top: 5px;">
-        $item
+    <div class="col-sm-12" align="center">
+        <div>$nom</div>
+        <div>$prenom</div>
+        <div>$job</div>
+        <div>$item</div>
     </div>
-
-    <nav style="text-align: center; background-color: #f1f1f1;">
-        <li style="color: #379EC1; font-size: 20px">$nom</li>
-        <li style="color: #379EC1; font-size: 20px">$prenom</li>
-        <li style="color: #379EC1; font-size: 20px">$job</li>
-    </nav>
-</div>
 
