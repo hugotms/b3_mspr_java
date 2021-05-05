@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap 4 Website Example</title>
+    <title>$title</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -10,67 +10,77 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-    font-weight: 300;
-  }
-
-  .jumbotron{
-    background: #379EC1;
-    font-weight: 300;
-  }
-
-  .navbar{
-    background: #659224;
-    font-weight: 300;
-  }
-
-  .col-sm-12{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background: #ccc;
-    font-weight: 300;
-  }
-
-
-  </style>
+      body {
+          margin: 0;
+          background: #659224;
+          font-family: "Roboto Light";
+      }
+      .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100vh;
+      }
+      .header {
+          display: flex;
+          flex-direction: row;
+          align-content : center;
+          background-color: #379EC1;
+          z-index: 10000;
+          padding: 1%;
+      }
+      header a {
+          text-decoration: none;
+          justify-content: center;
+          color : black;
+          text-align : center;
+          font-family: "Roboto M";
+      }
+      main {
+          flex: 1;
+      }
+      .container {
+          display: flex;
+          flex-direction: column;
+          margin : 0;
+          background-color: white;
+          height: 100%;
+      }
+      .footer {
+          display : flex;
+          flex-direction: row;
+          justify-content: space-around;
+          background-color : #379EC1;
+      }
+      @media (min-width:768px) {
+          .container {
+              margin : 0 auto;
+          }
+      }
+    </style>
 </head>
 <body>
-
-<div class="jumbotron text-center" style="margin-bottom:0">
-    <img alt="logo" src=" https://raw.githubusercontent.com/hugotms/b3_mspr_java/main/src/main/resources/logo.JPG " width="304" height="236">
-</div>
-
-<nav class="navbar navbar-expand-sm navbar-dark" >
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-        </ul>
+    <div class="content">
+        <header>
+            <div class="header">
+                <div>
+                    <img alt="logo" src=" https://raw.githubusercontent.com/hugotms/b3_mspr_java/main/src/main/resources/logo.JPG " height="90%">
+                </div>
+                <div>
+                    <a href="./index.html">GO Securi</a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                $body
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <p>CHANUT Guillaume - RACINE Eliot - SALMON Valentin - TOMASI Hugo</p>
+            </div>
+        </footer>
     </div>
-</nav>
-
-<div>
-    $body
-</div>
-
-<div class="jumbotron text-center">
-    <div>
-        footer
-    </div>
-</div>
-
 </body>
 </html>
