@@ -18,7 +18,3 @@ jobs:
         with:
           tags: generation:latest
           push: false
-
-      - uses: addnab/docker-run-action@v3
-        with:
-          image: generation:latest
