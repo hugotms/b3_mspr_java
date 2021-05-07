@@ -1,6 +1,7 @@
 package fr.gosecuri.items;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Page {
     private String type;
@@ -35,6 +36,7 @@ public class Page {
     }
 
     public ArrayList<String> getList() {
+        Collections.sort(list);
         return list;
     }
 
