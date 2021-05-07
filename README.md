@@ -1,3 +1,3 @@
 # b3_mspr_java
 
-petit test
+petit test d'intégration continue
